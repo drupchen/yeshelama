@@ -205,7 +205,13 @@ head = dedent("""\
         font-family: 'Inter', sans-serif;
         letter-spacing: 0.02em;
       }
-
+      
+      .session {
+        font-size: 0.875rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+      }
+      
       .session-links .tibetan {
         font-size: 15pt;
         color: #1d458c;
@@ -364,33 +370,64 @@ body_beginning = dedent("""\
 player_start = '<audio id="hyperplayer1" style="position:relative; width:97%" src="'
 
 audio_links = {
-    '1': "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736570-44100-2-27f390b28e1d1.m4a",
-    "2": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736665-44100-2-2527d398de1d9.m4a",
-    "3": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736739-44100-2-c97d74f8a6b2a.m4a",
-    "4": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736793-44100-2-f64624c211131.m4a",
-    "5": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736834-44100-2-6882ddcdb934f.m4a",
-    "6": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736888-44100-2-e71622ff2b752.m4a",
-    "7": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736952-44100-2-73ef522c85211.m4a",
-    "8": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737003-44100-2-f282e145d7552.m4a",
-    "9": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737079-44100-2-1248d6de476e6.m4a",
-    "10": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/14eb2917-f211-7e78-1a20-2e8f24c945de.mp3",
-    "11": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/6b385cbf-9f65-f8b8-cf07-164c3397fbc1.mp3",
-    "12": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737231-44100-2-e64026282b7e8.m4a",
-    "13": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737277-44100-2-9c9dc845aee6b.m4a",
-    "14": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/6d7def0d-448e-565e-d538-d541fbb7d3f7.mp3",
-    "15": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737428-44100-2-b6925d7b86df7.m4a",
-    "16": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737493-44100-2-d2a9ec7c1d7fd.m4a",
-    "17": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/020bbf50-f973-4857-d83c-3a723a5bad15.mp3",
-    "18": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737614-44100-2-ce17331536d66.m4a",
-    "19": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/f8544989-df9f-508b-10ea-a0b2ebecd317.mp3",
-    "20": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737750-44100-2-a0655fe7bc83f.m4a",
-    "21": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737800-44100-2-7ed22a8137a69.m4a",
-    "22": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737884-44100-2-7a1c1199ce4bb.m4a",
-    "23": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/db2d3fbc-0503-fcd9-e727-b7600bd48524.mp3",
-    "24": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/76891969-42c7-22a3-50c4-0c98241d9ad5.mp3",
-    "25": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406738076-44100-2-a01133620d958.m4a",
-    "26": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406dc490-e031-6107-e429-aaa1b3834b65.mp3",
-    "27": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/43be0c99-94f9-b5d1-248e-d8faef0e8f87.mp3"
+    "A1": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737079-44100-2-1248d6de476e6.m4a",
+    "A2": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/14eb2917-f211-7e78-1a20-2e8f24c945de.mp3",
+    "A3": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/6b385cbf-9f65-f8b8-cf07-164c3397fbc1.mp3",
+    "A4": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737231-44100-2-e64026282b7e8.m4a",
+    "A5": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737277-44100-2-9c9dc845aee6b.m4a",
+    "A6": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/6d7def0d-448e-565e-d538-d541fbb7d3f7.mp3",
+    "A7": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737428-44100-2-b6925d7b86df7.m4a",
+    "A8": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737493-44100-2-d2a9ec7c1d7fd.m4a",
+    "A9": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/020bbf50-f973-4857-d83c-3a723a5bad15.mp3",
+    "A10": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737614-44100-2-ce17331536d66.m4a",
+    "A11": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/f8544989-df9f-508b-10ea-a0b2ebecd317.mp3",
+    "A12": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737750-44100-2-a0655fe7bc83f.m4a",
+    "A13": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737800-44100-2-7ed22a8137a69.m4a",
+    "A14": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406737884-44100-2-7a1c1199ce4bb.m4a",
+    "A15": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/db2d3fbc-0503-fcd9-e727-b7600bd48524.mp3",
+    "A16": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/76891969-42c7-22a3-50c4-0c98241d9ad5.mp3",
+    "A17": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406738076-44100-2-a01133620d958.m4a",
+    "A18": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406dc490-e031-6107-e429-aaa1b3834b65.mp3",
+    "A19": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/43be0c99-94f9-b5d1-248e-d8faef0e8f87.mp3",
+    "A20": 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407428468-44100-2-e4fe99b6ceb97.m4a',
+    'A21': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407428515-44100-2-39429612e144a.m4a',
+    'A22': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/673a77cc-53eb-1bc3-af0b-ab6d1a91e4a7.mp3',
+    'A23': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/1e7b0499-f05d-1026-80fd-19aea6fd92d7.mp3',
+    'A24': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407428642-44100-2-c8c66bf4e29ec.m4a',
+    'B1': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/b843dc81-4e09-f743-44f3-b33881a10f0b.mp3',
+    'B2': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/a0eaae15-7ed6-ff2f-dcbe-7522e6dabd19.mp3',
+    'B3': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/8c59f6ea-86f7-c2b5-8401-8b32317f55e7.mp3',
+    'B4': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407428745-44100-2-45ea69f10fd58.m4a',
+    'B5': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407428998-44100-2-fe8247188af58.m4a',
+    'B6': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407429017-44100-2-a0e44e5d01252.m4a',
+    'B7': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407429036-44100-2-37eef801e29a3.m4a',
+    'B8': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/6ed59dc2-fe51-f93c-7fec-67f327771986.mp3',
+    'B9': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/459af35f-726b-fe09-0966-51db207b616b.mp3',
+    'B10': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/62cd23cd-c566-7566-3f75-572f51a81743.mp3',
+    'B11': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/e36063a4-325c-eb84-285a-d5070456cd88.mp3',
+    'B12': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407429176-44100-2-51806a5ef249a.m4a',
+    'B13': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/73700c91-3f93-162c-ab9f-193fdfec09c7.mp3',
+    'B14': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/384299f3-c1a4-f364-c8a8-6b326e6fb996.mp3',
+    'B15': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/b02dab35-56b1-c72f-ef8b-ec0d3fba8dd8.mp3',
+    'B16': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/c2bed140-ff25-a298-c874-b3b2b9def988.mp3',
+    'B17': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/444805ac-07f7-767f-25fe-aa9b5d80e383.mp3',
+    'B18': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/9b02bb40-9c03-3b94-0870-b1bf5fcf0f76.mp3',
+    'B19': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407432271-44100-2-70ac78dfa4f47.m4a',
+    'B20': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/abd779a9-130d-cd67-ee1c-ecfab21e8282.mp3',
+    'B21': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/2546b8f8-89fe-e5e3-02ee-6cd2f71febc3.mp3',
+    'B22': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/a4048fef-b18e-479d-853e-56135b6154cd.mp3',
+    'B23': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/b48fffd7-7fe1-253a-5a40-70cfece0461b.mp3',
+    'B24': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407432433-44100-2-0b069c65a92d9.m4a',
+    'B25': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/6b4929c7-05fb-4e60-400c-966fdb2fe6d6.mp3',
+    'B26': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/20489d0d-6bdb-a6a7-d6bf-193a1826b662.mp3',
+    "C1": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736739-44100-2-c97d74f8a6b2a.m4a",
+    'C2': "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736570-44100-2-27f390b28e1d1.m4a",
+    "C3": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736665-44100-2-2527d398de1d9.m4a",
+    "C4": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736793-44100-2-f64624c211131.m4a",
+    'C5': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407432530-44100-2-57443b90e8fa2.m4a',
+    'C6': 'https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-13/407432560-44100-2-a1f7919d7a4c5.m4a',
+    "C7": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736834-44100-2-6882ddcdb934f.m4a",
+    "C8": "https://d3ctxlq1ktw2nl.cloudfront.net/staging/2025-8-2/406736888-44100-2-e71622ff2b752.m4a",
 }
 player_middle = '" type="audio/'
 player_end = '" controlsList="nodownload" controls></audio>'
@@ -643,7 +680,13 @@ index_head = dedent("""\
         font-family: 'Inter', sans-serif;
         letter-spacing: 0.02em;
       }
-
+      
+      .session {
+        font-size: 0.875rem;
+        font-weight: 500;
+        font-family: 'Inter', sans-serif;
+      }
+      
       .session-links .tibetan {
         font-size: 15pt;
         color: #1d458c;
@@ -783,8 +826,7 @@ index_head = dedent("""\
         font-family: Jomolhari, serif;
       }
     </style>
-  </head>
-  <body>""")
+  </head>""")
 
 index_body = dedent("""\
   <body>
@@ -792,8 +834,11 @@ index_body = dedent("""\
 
 index_link_start = '\n<a href="sessions/transcript_'
 index_link_start2 = '.html#hypertranscript1='
-index_link_middle = '"><span class="tibetan">'
-index_link_end = '</span></a>'
+index_link_middle1a = '"><span class="session-a"><span class="session">'
+index_link_middle1b = '"><span class="session-b"><span class="session">'
+index_link_middle1c = '"><span class="session-c"><span class="session">'
+index_link_middle2 = ' </span><span class="tibetan">'
+index_link_end = '</span></span></a>'
 
 index_end = dedent("""\
     </div>
